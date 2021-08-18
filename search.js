@@ -38,7 +38,7 @@ function search() {
                 if(! save_query.includes('?') && ! save_query.includes('*')) {
                     result = allWords.filter(word => word == query);
                 }
-                output.innerHTML = result.join("<hr>");
+                output.innerHTML = "짜잔";
             }
         }
     }
