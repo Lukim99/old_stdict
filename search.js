@@ -1,7 +1,7 @@
 function search() {
     var query = document.getElementById('query').value;
     var rawFile = new XMLHttpRequest();
-    rawFile.open("GET", "https://word.old-stdict-korean.kro.kr", false);
+    rawFile.open("GET", "https://old-stdict-korean.kro.kr/allWords.txt", false);
     rawFile.onreadystatechange = function ()
     {
         if(rawFile.readyState === 4)
