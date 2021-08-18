@@ -1,6 +1,5 @@
 function search() {
     var query = document.getElementById('query').value;
-    alert(query + "에 대해 검색중입니다.");
     var rawFile = new XMLHttpRequest();
     rawFile.open("GET", "https://word.old-stdict-korean.kro.kr", false);
     rawFile.onreadystatechange = function ()
@@ -17,7 +16,7 @@ function search() {
                     query = query.replace(/\?/gi, "[가-힣ㄱ-ㅎ]{1}");
                 if(query.includes('*')) {
                     if(query.split('*').length > 2) {
-                        return alert("* 특수문자는 2개 이상 포함될 수 없습니다.");
+                        return alert("'*' 문자는 2개 이상 포함할 수 없습니다.");
                     }
                     else if(query.startsWith('*')) {
                         var condition = new RegExp(`${query.replace(/\*/i, "")}$`, 'gi');
@@ -39,7 +38,7 @@ function search() {
                 if(! save_query.includes('?') && ! save_query.includes('*')) {
                     result = allWords.filter(word => word == query);
                 }
-                output.innerHTML = "검색 결과 (" + result.length + "건)<br>" + result.join("<hr>");
+                output.innerHTML = "<h5>'" + query + "' 검색 결과 (" + result.length + "건)</h5><br><br>" + result.join("<hr>");
             }
         }
     }
