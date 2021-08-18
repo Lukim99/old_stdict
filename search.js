@@ -1,7 +1,7 @@
 function search() {
     var query = document.getElementById('query').value;
     var rawFile = new XMLHttpRequest();
-    rawFile.open("GET", "https://old-stdict-korean.kro.kr/allWords.txt", false);
+    rawFile.open("GET", "https://word.old-stdict-korean.kro.kr", false);
     rawFile.onreadystatechange = function ()
     {
         if(rawFile.readyState === 4)
@@ -38,7 +38,7 @@ function search() {
                 if(! save_query.includes('?') && ! save_query.includes('*')) {
                     result = allWords.filter(word => word == query);
                 }
-                output.innerHTML = "<h5>'" + query + "' 검색 결과 (" + result.length + "건)</h5><br><br>" + result.join("<hr>");
+                output.innerHTML = "<h5>'" + save_query + "' 검색 결과 (" + result.length + "건)</h5><br><br>" + result.join("<hr>");
             }
         }
     }
