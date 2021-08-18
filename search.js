@@ -38,7 +38,7 @@ function search() {
                 if(! save_query.includes('?') && ! save_query.includes('*')) {
                     result = allWords.filter(word => word == query);
                 }
-                output.innerHTML = "<h5>'" + save_query + "' 검색 결과 (" + result.length + "건)</h5><br><br>" + result.join("<hr>");
+                output.innerHTML = "<h3>'" + save_query + "' 검색 결과 (" + result.length + "건)</h3><br><br>" + result.join("<hr>");
             }
         }
     }
