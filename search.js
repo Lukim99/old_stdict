@@ -1,4 +1,5 @@
-function search(query) {
+function search() {
+    var query = document.getElementById('query').value;
     var rawFile = new XMLHttpRequest();
     rawFile.open("GET", "https://word.old-stdict-korean.kro.kr", false);
     rawFile.onreadystatechange = function ()
