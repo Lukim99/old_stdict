@@ -1,5 +1,6 @@
 function search() {
     var query = document.getElementById('query').value;
+    alert(query + "에 대해 검색중입니다.");
     var rawFile = new XMLHttpRequest();
     rawFile.open("GET", "https://word.old-stdict-korean.kro.kr", false);
     rawFile.onreadystatechange = function ()
