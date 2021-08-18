@@ -8,7 +8,7 @@ function search() {
         {
             if(rawFile.status === 200 || rawFile.status == 0)
             {
-                var allWords = rawFile.responseText;
+                var allWords = rawFile.responseText.split("\n");
                 var result = [];
                 var save_query = query;
                 var output = document.getElementById('result');
