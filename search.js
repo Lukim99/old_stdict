@@ -39,7 +39,7 @@ function search() {
                 if(! save_query.includes('?') && ! save_query.includes('*')) {
                     result = allWords.filter(word => word == query);
                 }
-                output.innerHTML = "짜잔";
+                output.innerHTML = "검색 결과 (" + result.length + "건)<br>" + result.join("<hr>");
             }
         }
     }
