@@ -14,7 +14,8 @@ function search() {
                 var output = document.getElementById('result');
                 query = query.replace(/\?/gi, ".").replace(/\*/g, ".*");
                 result = allWords.filter(word => word.match(RegExp(query)) == word);
-                output.innerHTML = "<h3>'" + save_query + "' 검색 결과 (" + result.length + "건)</h3><br><br>" + result.join("<hr>");
+                output.innerHTML = "<h3>검색중...</h3>";
+                output.innerHTML = "<h3>'" + save_query + "' 검색 결과 (" + result.length + "건)</h3><br><br>" + result.join("<br>");
             }
         }
     }
