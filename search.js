@@ -9,6 +9,7 @@ function search() {
             if(rawFile.status === 200 || rawFile.status == 0)
             {
                 var allWords = rawFile.responseText.split("\n");
+                allWords = [...(new Set(allWords))];
                 var result = [];
                 var save_query = query;
                 var output = document.getElementById('result');
