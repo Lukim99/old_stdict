@@ -1,5 +1,5 @@
-var allWords = "";
-var rawFile = new XMLHttpRequest();
+allWords = [];
+rawFile = new XMLHttpRequest();
 rawFile.open("GET", "https://word.old-stdict-korean.kro.kr", false);
 rawFile.onreadystatechange = function ()
 {
@@ -7,7 +7,7 @@ rawFile.onreadystatechange = function ()
     {
         if(rawFile.status === 200 || rawFile.status == 0)
         {
-            var allWords = rawFile.responseText.split("\n");
+            allWords = rawFile.responseText.split("\n");
             allWords = [...(new Set(allWords))];
         }
     }
