@@ -27,6 +27,7 @@ function search() {
         self[index] = `
         <div class="count">${count}</div>
         <div class="word">${element}</div>`;
+        count++;
     })
     output.innerHTML = "<h3>'" + save_query + "' 검색 결과 (" + result.length + "건)</h3><br><br>" + result.join("<br>");
 }
