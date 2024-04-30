@@ -9,6 +9,7 @@ rawFile.onreadystatechange = function ()
         {
             allWords = rawFile.responseText.split("\n");
             allWords = [...(new Set(allWords))];
+            allWords.forEach((e,i,a) => a[i] = e.trim());
         }
     }
 }
